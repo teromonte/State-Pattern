@@ -2,7 +2,7 @@ class StateContext {
     private State state;
 
     public StateContext() {
-        state = new LowerCaseState();
+        state = new OffState();
     }
 
     /**
