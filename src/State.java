@@ -1,3 +1,3 @@
 interface State {
-    void writeName(StateContext context, String name);
+    void lookAtLamp(StateContext context, String name);
 }

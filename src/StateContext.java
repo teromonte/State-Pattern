@@ -14,7 +14,7 @@ class StateContext {
         state = newState;
     }
 
-    public void writeName(String name) {
-        state.writeName(this, name);
+    public void lookAtLamp(String name) {
+        state.lookAtLamp(this, name);
     }
 }
