@@ -1,7 +1,9 @@
 class OffState implements State {
     @Override
-    public void writeName(StateContext context, String name) {
-        System.out.println(name.toLowerCase());
-        context.setState(new OnState());
+    public boolean lookAtLamp(StateContext context) {
+       context.setState(new OnState());
+       System.out.println("off");
+        return true;
     }
+
 }

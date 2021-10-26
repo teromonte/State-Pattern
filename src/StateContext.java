@@ -15,6 +15,6 @@ class StateContext {
     }
 
     public void lookAtLamp(String name) {
-        state.lookAtLamp(this, name);
+        state.lookAtLamp(this);
     }
 }
