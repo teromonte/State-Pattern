@@ -1,6 +1,6 @@
 package statePattern;
 
-public class Main {
+public class MainS {
     public static void main(String[] args) {
         StateContext context = new StateContext();
         System.out.println(context.lookAtLamp());

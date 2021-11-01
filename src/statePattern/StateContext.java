@@ -1,3 +1,5 @@
+package statePattern;
+
 class StateContext {
     private State state;
 
