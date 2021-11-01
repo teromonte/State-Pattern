@@ -17,7 +17,7 @@ class ContactClass implements Contact {
     /**
      * Contact the email address.
      */
-    public String email;
+    private String email;
 
     /**
      * Default constructor
@@ -72,14 +72,13 @@ class ContactClass implements Contact {
         Contact other = (Contact) obj;
 
         if (name == null) {
-            if (other.getName() != null) return false;
-            else return true;
+            return other.getName() == null;
         }
         else return name.equals(other.getName());
     }
 
     @Override
     public String toString() {
-        return getName() + "; " + email + "; " + getPhone();
+        return getName() + "; " + getEmail() + "; " + getPhone();
     }
 }

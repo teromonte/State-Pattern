@@ -65,24 +65,29 @@ public class ContactBookInList implements ContactBook {
 
     @Override
     public void setPhone(String name, int phone) throws ContactDoesNotExistException {
-        if (has_Contact(name))
-            this.getContact(name).setPhone(phone);
-        else
-            throw new ContactDoesNotExistException();
+        Contact c = this.getContactExists(name);
+        c.setPhone(phone);
     }
 
     @Override
     public void setEmail(String name, String email) throws ContactDoesNotExistException {
-        if (has_Contact(name))
-            this.getContact(name).setEmail(email);
-        else
-            throw new ContactDoesNotExistException();
+        Contact c = this.getContactExists(name);
+        c.setEmail(email);
     }
 
     @Override
     public Iterator<Contact> listContacts() {
         return contacts.iterator();
     }
+
+    private Contact getContactExists(String name) throws ContactDoesNotExistException{
+        Contact c = this.getContact(name);
+        if (c != null)
+            return c;
+        else
+            throw new ContactDoesNotExistException();
+    }
+
 
     /**
      * @param name The contact name to lookup in the list
