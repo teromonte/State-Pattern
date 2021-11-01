@@ -6,13 +6,7 @@ import exceptions.ContactDoesNotExistException;
 
 public interface ContactBook {
 
-    /**
-     * Checks if there is a contact with the given name
-     * @param name the name to lookup
-     * @return <code>true</code> if the contact with <code>name</code> exists,
-     * <code>false</code> otherwise
-     */
-    boolean has_Contact(String name);
+
 
     /**
      * Returns the number of existing contacts

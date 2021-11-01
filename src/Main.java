@@ -38,7 +38,7 @@ public class Main {
         public String getCommandInputName() {
             return commandInputName;
         }
-    };
+    }
 
     /**
      * Main program. Runs the command interpreter.

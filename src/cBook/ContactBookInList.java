@@ -19,8 +19,7 @@ public class ContactBookInList implements ContactBook {
         contacts = new LinkedList<Contact>();
     }
 
-    @Override
-    public boolean has_Contact(String name) {
+    private boolean has_Contact(String name) {
         return this.getContact(name) != null;
     }
 
@@ -39,10 +38,6 @@ public class ContactBookInList implements ContactBook {
 
     @Override
     public void deleteContact(String name) throws ContactDoesNotExistException {
-        // A possible alternative would be:
-        // Contact c = this.getContact(name);
-        // contacts.remove(c);
-        // but this requires two searches in the list.
         // The following solution requires an equals(Object o) method
         // implemented in the ContactClass and a constructor that receives the name
         // as its single argument.
