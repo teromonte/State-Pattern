@@ -1,3 +1,5 @@
+package statePattern;
+
 class OnState implements State {
 
 

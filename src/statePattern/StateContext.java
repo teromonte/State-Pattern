@@ -1,3 +1,5 @@
+package statePattern;
+
 class StateContext {
     private State state;
 
@@ -7,7 +9,7 @@ class StateContext {
 
     /**
      * Set the current state.
-     * Normally only called by classes implementing the State interface.
+     * Normally only called by classes implementing the statePattern.State interface.
      * @param newState the new state of this context
      */
     void setState(State newState) {
